@@ -62,7 +62,7 @@ def startgame():
             board[player[0]][player[1]] = 0
             player[0] += 1
             board[player[0]][player[1]] = 7
-        if(inpi == "w"):
+        elif(inpi == "w"):
             if(board[player[0]-1][player[1]] == 1):
                 print("thats a wall over there!")
                 continue
@@ -71,7 +71,7 @@ def startgame():
             board[player[0]][player[1]] = 0
             player[0] -= 1
             board[player[0]][player[1]] = 7
-        if(inpi == "d"):
+        elif(inpi == "d"):
             if(board[player[0]][player[1]+1] == 1):
                 print("thats a wall over there!")
                 continue
@@ -80,7 +80,7 @@ def startgame():
             board[player[0]][player[1]] = 0
             player[1] += 1
             board[player[0]][player[1]] = 7
-        if(inpi == "a"):
+        elif(inpi == "a"):
             if(board[player[0]][player[1]-1] == 1):
                 print("thats a wall over there!")
                 continue
@@ -89,7 +89,8 @@ def startgame():
             board[player[0]][player[1]] = 0
             player[1] -= 1
             board[player[0]][player[1]] = 7
-
+        else:
+            print("?")
     while(1):
         yay = random.randint(0,200)
 

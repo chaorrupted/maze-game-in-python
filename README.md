@@ -6,4 +6,4 @@ kindly ask the nearest terminal to `python maze.py` and you're good to go.
 
 ## remember to
 
-resize your window. https://eksiup.com/f5ff4789e990
+Resize your window as such: https://eksiup.com/f5ff4789e990

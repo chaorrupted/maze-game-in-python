@@ -91,7 +91,7 @@ def startgame():
             board[player[0]][player[1]] = 7
         else:
             print("?")
-    while("banana"):
+    while("banana"): #-koluacik
         yay = random.randint(0,200)
 
         if(yay % 2 == 0):

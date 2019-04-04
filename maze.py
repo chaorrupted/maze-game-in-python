@@ -43,9 +43,11 @@ def startgame():
         board[block[0]][block[1]] = 1 
     
     
-    print("type \"d\" and hit enter to move left.")
+    print("type \"d\" and hit enter to move right.")
     print("you know the deal with w, a and s.")
-
+    print("1's are walls, 7 is you.")
+    print("8 is the exit.")
+    
     while(1):
         drawboard(board)
         if(player[0] == target[0] and player[1] == target[1]):

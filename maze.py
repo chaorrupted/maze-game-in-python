@@ -24,7 +24,7 @@ def initboard(row,column):
 def drawboard(brod):
     for item in brod:
         for each in item:
-            print(each, end="")
+            print(each, end=" ")
         print()
 
 def startgame():

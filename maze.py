@@ -71,13 +71,13 @@ def move(player, board, direction):
         else:
             return True
     deltax,deltay = 0,0
-    if direction == 'w':
+    if direction == 'k':
         deltax = -1
-    elif direction == 'a':
+    elif direction == 'h':
         deltay = -1
-    elif direction == 's':
+    elif direction == 'j':
         deltax = 1
-    elif direction == 'd':
+    elif direction == 'l':
         deltay = 1
     else:
         print(choice(error_input))
@@ -111,8 +111,9 @@ def startgame():
     
     print("type \"d\" and hit enter to move right.")
     print("you know the deal with w, a and s.")
-    print(*wall,"'s are walls. ", hero," is you.", sep='')
-    print(dest," is the exit.")
+    print(*wall, sep=", ", end="")
+    print("'s are walls. ", hero," is you.", sep='')
+    print(dest,"is the exit.")
     
     while(1):
         drawboard(board)

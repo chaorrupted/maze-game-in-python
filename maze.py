@@ -1,5 +1,4 @@
 from random import randint, choice
-from itertools import chain
 
 hero = 'ğ'
 path = 'o'

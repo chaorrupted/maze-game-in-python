@@ -31,10 +31,10 @@ def startgame():
     board = initboard(13,13)
     
     player = [1 ,1]    
-    board[player[0]][player[1]] = 7
+    board[player[0]][player[1]] = 'ğ'
     
     target = (8 ,8)
-    board[target[0]][target[1]] = 8
+    board[target[0]][target[1]] = 'ü'
 
     #add some walls
 
@@ -45,8 +45,8 @@ def startgame():
     
     print("type \"d\" and hit enter to move right.")
     print("you know the deal with w, a and s.")
-    print("1's are walls, 7 is you.")
-    print("8 is the exit.")
+    print("1's are walls, ğ is you.")
+    print("ş is the exit.")
     
     while(1):
         drawboard(board)
@@ -54,52 +54,54 @@ def startgame():
             break
         
 
-        inpi = str(input("where next?"))
+        inpi = str(input('ğü? '))
         if(inpi == "s"):
             if(board[player[0]+1][player[1]] == 1):
-                print("that's a WALL over there!")
+                print("şğğğğğğ(((")
                 continue
             else:
                 print()
             board[player[0]][player[1]] = 0
             player[0] += 1
-            board[player[0]][player[1]] = 7
+            board[player[0]][player[1]] = 'ğ'
         elif(inpi == "w"):
             if(board[player[0]-1][player[1]] == 1):
-                print("thats a wall over there!")
+                print("frrrp ğüüü .d.d")
                 continue
             else:
                 print()
             board[player[0]][player[1]] = 0
             player[0] -= 1
-            board[player[0]][player[1]] = 7
+            board[player[0]][player[1]] = 'ğ'
         elif(inpi == "d"):
             if(board[player[0]][player[1]+1] == 1):
-                print("thats a wall over there!")
+                print("vvvğüğşş!")
                 continue
             else:
                 print()
             board[player[0]][player[1]] = 0
             player[1] += 1
-            board[player[0]][player[1]] = 7
+            board[player[0]][player[1]] = 'ğ'
         elif(inpi == "a"):
             if(board[player[0]][player[1]-1] == 1):
-                print("thats a wall over there!")
+                print("ğüşşşş! .d")
                 continue
             else:
                 print()
             board[player[0]][player[1]] = 0
             player[1] -= 1
-            board[player[0]][player[1]] = 7
+            board[player[0]][player[1]] = 'ğ'
         else:
             print("?")
-    while("banana"): #-koluacik
+    while("MERHABA ARKADASLAR KANALIMA HOSGELDINIZ"):
         yay = random.randint(0,200)
 
-        if(yay % 2 == 0):
-            print("CONGRATULATIONS")
+        if yay % 3 == 0:
+            print("gg((")
+        elif yay % 3 == 1:
+            print("şğüü")
         else:
-            print("you did it")
+            print("frrrrp.")
 
 
 

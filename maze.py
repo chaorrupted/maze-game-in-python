@@ -109,8 +109,8 @@ def startgame():
         board[block[0]][block[1]] = choice(wall)
     
     
-    print("type \"d\" and hit enter to move right.")
-    print("you know the deal with w, a and s.")
+    print("type \"h\" and hit enter to move right.")
+    print("you know the deal with j, k and l.")
     print(*wall, sep=", ", end="")
     print("'s are walls. ", hero," is you.", sep='')
     print(dest,"is the exit.")

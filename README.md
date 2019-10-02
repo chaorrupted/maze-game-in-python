@@ -4,6 +4,8 @@ A parody of the famous parody/clone of the famous title "Fortnite"
 
 kindly ask the nearest terminal to `python maze.py` and you're good to go.
 
+In this branch, controls are WASD instead of the superior HJKL to appeal to the normies.
+
 ## ~~recommended that you~~
 
 ~~Resize your window as such: https://eksiup.com/671797cbb595~~

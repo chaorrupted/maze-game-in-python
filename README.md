@@ -1,15 +1,12 @@
-# an interactive game in python
+# an interactive game in python, with more şğü(bom than you would ever need!
 
-a parody/clone of the famous title "Fortnite"
+A parody of the famous parody/clone of the famous title "Fortnite"
 
 kindly ask the nearest terminal to `python maze.py` and you're good to go.
 
-## recommended that you
+In this branch, controls are WASD instead of the superior HJKL to appeal to the normies.
 
-Resize your window as such: https://eksiup.com/671797cbb595
+## ~~recommended that you~~
 
-## for c++ lovers
-
-now we also offer the c++ parody/clone of the famous title "Fortnite - a maze game in python". with this version, you can get congratulated up to 10 times faster than ever before. 
-
-kindly ask the nearest g++ to `g++ maze.cpp` and you're good to go.
+~~Resize your window as such: https://eksiup.com/671797cbb595~~
+(don't)

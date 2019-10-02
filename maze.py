@@ -1,4 +1,51 @@
 from random import randint, choice
+from sys import exit
+
+# found this piece of code from
+# http://code.activestate.com/recipes/users/
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class _Getch:
+    """Gets a single character from standard input.  Does not echo to the
+screen."""
+    def __init__(self):
+        try:
+            self.impl = _GetchWindows()
+        except ImportError:
+            self.impl = _GetchUnix()
+
+    def __call__(self): return self.impl()
+
+
+# for *nix
+class _GetchUnix:
+    def __init__(self):
+        import tty, sys
+
+    def __call__(self):
+        import sys, tty, termios
+        fd = sys.stdin.fileno()
+        old_settings = termios.tcgetattr(fd)
+        try:
+            tty.setraw(sys.stdin.fileno())
+            ch = sys.stdin.read(1)
+        finally:
+            termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
+        return ch
+
+
+# for windows
+class _GetchWindows:
+    def __init__(self):
+        import msvcrt
+
+    def __call__(self):
+        import msvcrt
+        return msvcrt.getch()
+
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+getch = _Getch()
 
 hero = 'ğ'
 path = 'o'
@@ -71,13 +118,13 @@ def move(player, board, direction):
         else:
             return True
     deltax,deltay = 0,0
-    if direction == 'k':
+    if direction == 'w':
         deltax = -1
-    elif direction == 'h':
+    elif direction == 'a':
         deltay = -1
-    elif direction == 'j':
+    elif direction == 's':
         deltax = 1
-    elif direction == 'l':
+    elif direction == 'd':
         deltay = 1
     else:
         print(choice(error_input))
@@ -109,8 +156,9 @@ def startgame():
         board[block[0]][block[1]] = choice(wall)
     
     
-    print("type \"h\" and hit enter to move right.")
-    print("you know the deal with j, k and l.")
+    print("press \"x\" to quit the game, this is the only way.")
+    print("press \"a\" to move right.")
+    print("you know the deal with s, w and d.")
     print(*wall, sep=", ", end="")
     print("'s are walls. ", hero," is you.", sep='')
     print(dest,"is the exit.")
@@ -121,7 +169,12 @@ def startgame():
             break
         
 
-        sibel_canin_sari_kedisi = str(input('ğü? '))
+        #sibel_canin_sari_kedisi = str(input('ğü? '))
+        print("ğü? ", end="")
+        sibel_canin_sari_kedisi =  getch.impl()
+        print(sibel_canin_sari_kedisi)
+        if sibel_canin_sari_kedisi == 'x':
+            exit()
         move(player, board, sibel_canin_sari_kedisi)
     while("MERHABA ARKADASLAR KANALIMA HOSGELDINIZ"):
         print(choice(congrats))
